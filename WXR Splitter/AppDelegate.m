@@ -45,7 +45,7 @@
     unsigned long totalCount = [st length];
     unsigned long iteration = 0;
     unsigned long currentCount = 0;
-    unsigned long maxInc = 1000000 * [sizeField intValue];
+    unsigned long maxInc = 1000000 * [sizeField floatValue];
     BOOL EndOfFile = NO;
     NSURL *outputDirection = outputDirec;
     NSMutableArray * fileArray = [[NSMutableArray alloc] init];
@@ -130,7 +130,7 @@
 }
 - (IBAction)startSplitProcess:(id)sender {
     
-    if (outputDirec != nil && [sizeField intValue] > 0) {
+    if (outputDirec != nil && [sizeField floatValue] > 0) {
     NSOpenPanel * openPanel = [NSOpenPanel openPanel];
     [openPanel setCanChooseDirectories:NO];
     [openPanel setCanChooseFiles:YES];
